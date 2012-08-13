@@ -3,6 +3,7 @@
     "description": "Single-file app js concat utility",
     "version": "0.0.2",
     "author": "Raivo Laanemets <raivo@infdot.com>",
+    "repository": "git://github.com/rla/concatter",
     "dependencies": {
         "glob": "*",
         "commander": "*"
