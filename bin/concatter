@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+program
+    .option('-b, --base <path>', 'base path for modules')
+    .option('-i, --indent <indent>', 'indent for module wrapping', '    ')
+    .option('-o, --output <path>', 'name of the output file')
+    .parse(process.argv);
+
+var base = program.base;
+var indent = program.indent;
+var output = program.output;
+
+if (!program.base) {
+    process.stderr.write('Base path for modules not set.\n');
+    process.exit(1);
+}
+
+require('../lib/build').build(base, output, indent);
