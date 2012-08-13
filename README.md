@@ -3,7 +3,7 @@ Concatter
 
 Helper utility to build single-file JavaScript applications.
 It uses NodeJS-styled `require` function calls to resolve file concatenation order.
-It is quite experimental at the moment at does not support cyclic dependencies.
+It is quite experimental at the moment and does not support cyclic dependencies.
 
 Usage
 -----
@@ -67,7 +67,7 @@ exports.c = function() {
 then the project is compiled to a single file using the command `concatter --base example`
 which results in the following output:
 
-```
+```javascript
 module1 = {};
 module1.a = {};
 module2 = {};
