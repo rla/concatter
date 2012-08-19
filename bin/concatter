@@ -6,15 +6,17 @@ program
     .option('-b, --base <path>', 'base path for modules')
     .option('-i, --indent <indent>', 'indent for module wrapping', '    ')
     .option('-o, --output <path>', 'name of the output file')
+    .option('-r, --root <name>', 'name of the root namespace')
     .parse(process.argv);
 
 var base = program.base;
 var indent = program.indent;
 var output = program.output;
+var root = program.root;
 
 if (!program.base) {
     process.stderr.write('Base path for modules not set.\n');
     process.exit(1);
 }
 
-require('../lib/build').build(base, output, indent);
+require('../lib/build').build(base, output, indent, root);
