@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/rla/concatter.png)](http://travis-ci.org/rla/concatter)
 Concatter
 =========
 
